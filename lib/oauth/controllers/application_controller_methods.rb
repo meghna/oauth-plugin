@@ -82,7 +82,7 @@ module OAuth
               controller.send :current_token=, @oauth2_token
             end
           end
-          @oauth2_token!=nil
+          controller.send(:current_token) != nil
         end
 
         def oauth10_token
